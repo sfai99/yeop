@@ -32,6 +32,9 @@ body {  /* 전체에 적용될 기본 글자 스타일 */
 em {  /* 태그의 기울임 스타일 삭제 */
     font-style: normal;
 }
+li {  /* li앞에 동그라미 삭제 */
+    list-style: none;
+}
 .intro {
     text-align: center; /* 가운데 정렬 */
     margin: 170px 0 170px 0;
@@ -89,4 +92,48 @@ em {  /* 태그의 기울임 스타일 삭제 */
 .Overview p strong {
     font-weight: 700;
     text-decoration: underline;
+}
+.color {
+    margin: 150px 0 150px 0;
+}
+.color h1 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+.color h2 {
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 7px 0;
+}
+.color ul li {
+    height: 270px;
+    width: 190px;
+    color: #ffffff;
+    padding: 170px 0 0 22px;
+}
+.color ul li.blue {
+    background-color: #00507d;
+}
+.color ul li.lb {
+    background-color: #00a5e5;
+}
+.color ul li.dg {
+    background-color: #4b5151;
+}
+.color ul li.lg {
+    background-color: #bcbdbb;
+}
+.color ul li.gold {
+    background-color: #86754e;
+}
+.color ul li.silver {
+    background-color: #8d908f;
+}
+.color ul li h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
 }
