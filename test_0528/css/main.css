@@ -108,11 +108,15 @@ li {  /* li앞에 동그라미 삭제 */
     font-weight: 700;
     margin: 20px 0 7px 0;
 }
+.color ul {
+    display: flex;
+    justify-content: space-between;
+}
 .color ul li {
     height: 270px;
     width: 190px;
     color: #ffffff;
-    padding: 170px 0 0 22px;
+    padding: 170px 0 0 25px;
 }
 .color ul li.blue {
     background-color: #00507d;
@@ -135,5 +139,5 @@ li {  /* li앞에 동그라미 삭제 */
 .color ul li h3 {
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
 }
