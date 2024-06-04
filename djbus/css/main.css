@@ -1,0 +1,56 @@
+@import url(fonts.css);
+@import url(default.css);
+
+/*글자의 스타일은 상속받음 - 기본글자의 스타일은 모든 태그를 감싸는 html, body에 선언*/
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2d2d2d;
+    line-height: 1.4;
+    letter-spacing: 0em; /*자간*/
+    word-break: keep-all; /*단어별로 줄바꿈*/
+}
+.wrapper { /*홈페이지의 넓이를 제한하고 가운데 정렬*/
+    width: 1260px;
+    margin: 0 auto; /*가운데정렬*/
+}
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 21px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a { /*1차 메뉴 사이즈 - a에게 여백줘야 함*/
+    font-size: 20px;
+    color: #1d1d1d;
+    padding: 36px 27px;
+    display: block; /*a는 inline태그*/
+}
+header .gnb ul li a:hover { /*마우스를 올렸을 때*/
+    color: #0057BE;
+    font-weight: 800;
+    font-size: 21px;
+}
+
+.visual {
+    height: 850px;
+    background: url(../images/visula_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.visual strong {
+    padding: 365px 0 0 0;
+    display: block; /*인라인 요소는 여백이 적용X*/
+}
+.visual h2 {
+    font-size: 45px;
+    line-height: 1.2;
+}
