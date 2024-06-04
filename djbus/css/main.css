@@ -11,6 +11,9 @@ html, body {
     letter-spacing: 0em; /*자간*/
     word-break: keep-all; /*단어별로 줄바꿈*/
 }
+#wrap { /* # - id / 홈페이지 전체를 감싸는 요소*/
+    min-width: 1260px; /*스크롤바를 움직일 때 짤리는 걸 방지*/
+}
 .wrapper { /*홈페이지의 넓이를 제한하고 가운데 정렬*/
     width: 1260px;
     margin: 0 auto; /*가운데정렬*/
@@ -53,4 +56,121 @@ header .gnb ul li a:hover { /*마우스를 올렸을 때*/
 .visual h2 {
     font-size: 45px;
     line-height: 1.2;
+}
+
+.introduce .art {
+    display: flex;
+    justify-content: center;
+    margin: 160px 0 56px 0;
+}
+.introduce .art .txt {
+    margin: 0 0 0 107px;
+    width: 428px;
+}
+.introduce .scholarship {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+.introduce .scholarship .txt {
+    margin: 0 107px 0 0;
+    width: 428px;
+}
+.introduce .scholarship ul { /*flex로 배치한 버튼을 오른쪽 정렬*/
+    justify-content: flex-end;
+} 
+.introduce h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 800;
+    margin: 65px 0 0 0;
+}
+.introduce strong {
+    color: #0057BE;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 14px 0;
+    display: block;
+}
+.introduce ul {
+    display: flex;
+    /*a태그는 원래 좌우로 배치 -> 하지만 좌우 여백이 발생 -> 좌 우 여백 삭제 flex*/
+    margin: 35px 0 0 0;
+}
+.introduce ul li a {
+    border: #666 solid 1px;
+    padding: 6px 21px;
+    display: block; /*padding값을 적용하기 위해*/
+    margin: 0 10px 0 0;
+}
+.introduce ul li:last-child a { /*마지막 li의 a*/
+    margin-right: 0;
+}
+.introduce ul li a:hover {
+    background-color: #8EE353;
+    border: #8EE353 solid 1px;
+    color: #fff;
+}
+
+.promotion {
+    background: url(../images/news_bg.png) no-repeat center top;
+    /*배경보다 내부의 콘텐츠 길이가 더 긺 -> 배경의 위치를 정확하게*/
+    margin: 160px 0 0 0;
+}
+.promotion .news {
+    color: rgba(255,255,255,0.8);
+    padding: 130px 0;
+}
+.promotion .news .wrapper {
+    display: flex;
+    justify-content: space-between
+}
+.promotion .news .tit h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 5px 0;
+    padding: 20px 0 0 0;
+}
+.promotion .news .tit h2 strong {
+    color: #8EE353;
+}
+.promotion .news .tit a {
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 6px 21px;
+    display: inline-block;
+    margin: 40px 0 0 0;
+}
+.promotion .news .tit a:hover {
+    background-color: #8EE353;
+    border: #8EE353 solid 1px;
+    color: #0057BE
+}
+.promotion .list {
+    width: 750px;
+    height: 416px;
+}
+.promotion .list ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.promotion .list ul li:last-child {
+    border-bottom: none
+}
+.promotion .list ul li a {
+    display: flex; /*block 요소로 만들어서 넓이가 100% 됨*/
+    justify-content: space-between;
+    align-items: center; /*위아래 가운데*/
+    padding: 29px 0;
+}
+.promotion .list ul li strong {
+    font-size: 25px;
+    color: #fff;
+}
+.promotion .list ul li a:hover strong {
+    color: #8EE353;
+    font-weight: 800;
+}
+.promotion .list ul li a:hover span {
+    color: #8EE353;
 }
