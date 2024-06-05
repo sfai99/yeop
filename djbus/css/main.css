@@ -236,3 +236,6 @@ footer .f_info address, footer .f_info span {
     /*addrress(블럭태그) - span태그와 좌우에 배치
       span - margin 적용*/
 }
+footer .copyright {
+    color: rgba(255,255,255,0.6);
+}
