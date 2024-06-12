@@ -2,12 +2,8 @@
 @import url(fonts.css);
 @import url(common.css);
 
-.sound {
-    background: url(../images/sound_bg.png) no-repeat center center / cover;
-    color: #fff;
-    text-align: center;
-    height: 572px;
-}
+.sound {background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: #fff; text-align: center; height: 572px;}
 .sound h2 {
     font-size: 60px;
     font-weight: 800;
@@ -148,3 +144,42 @@
     }
     .story .photo img { width: 100%; } /*photo 넓이의 100%*/
 }
+
+.news h2 {font-size: 60px; font-weight: 800; line-height: 1; margin: 200px 0 60px 0;}
+.news ul {display: flex; justify-content: space-between;}
+.news ul li {width: 297px; border: 1px solid #eee;}
+.news ul li a {padding: 30px 31px; display: block;}
+.news ul li a h3 {font-size: 18px; font-weight: 800; line-height:1.2; color: #2d2d2d; margin: 28px 0 17px 0;
+    /*1줄로 제한하기 - 주의사항 padding 절대 금지*/
+    white-space: nowrap; /*줄바꿈 금지*/
+    overflow: hidden; /*영역에서 넘치는 부분 자르기 - 이 요소가 block 요소여야함*/
+    text-overflow: ellipsis; /*글자 마지막에...추가 - 글자가 잘리는 현상 방지*/}
+.news ul li a strong {color: #377F7E;}
+.news ul li a p {
+    /*3줄로 제한 - 주의사항 padding 절대 금지*/
+    line-height: 1.4;
+    height: 4.2em; /*행간 X 줄수 = 단위는 em*/
+    overflow: hidden; /*영역에서 넘치는 부분 자르기*/}
+.news ul li a span {color: #666; margin: 51px 0 0 0; display: block;}
+@media screen and (max-width:640px){
+    .news h2 {font-size: 30px; font-weight: 800; margin: 135px 0 20px 0;}
+    .news ul {flex-wrap: wrap;} /*2줄씩 2개로 나오게*/
+    .news ul li {width: calc(50% - 8px); border: 1px solid #eee; margin-bottom: 16px;}
+    .news ul li a {padding: 30px 31px; display: block;}
+    .news ul li a h3 {font-size: 18px; font-weight: 800; line-height:1.2; color: #2d2d2d; margin: 28px 0 17px 0;
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis; }
+    .news ul li a p {
+        line-height: 1.4;
+        height: 4.2em;
+        overflow: hidden;}
+    .news ul li a span {color: #666; margin: 51px 0 0 0; display: block;}
+}/*media*/
+@media screen and (max-width:500px){
+    .news ul {flex-wrap: nowrap; /*줄바꿈 금지*/ flex-direction: column; /*세로로 배치*/} 
+    .news ul li {width: auto; /*넓이 제한 풀기*/}
+}/*media*/
+
+
+.container {margin-bottom: 150px;}
