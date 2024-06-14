@@ -1,0 +1,120 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+/*폰트2개 - 제목:gmarket , 본문:pretendard
+  body에는 본문 서체 적용.
+  
+  제목 서체를 적용하는 방법
+  1. css에서 해당 요소를 모두 선택해서 
+  .biz h2 이렇게 각각 불러서 gmarket 서체 적용 - font-family:gmarket 계속 선언
+
+  2. css를 하나를 만듦
+  예를 들어 .tit 이라고
+  html에서 gmarket 서체를 써야하는 html요소에
+  <section class="biz">
+    <h2 class="tit"></h2> -- 필요한 곳에 class명을 주는 방식
+  </section> */
+
+.tit {
+    font-family: 'GmarketSans', sans-serif; /*sans-serif-고딕*/
+    font-weight: 500; line-height: 1.2;
+}
+.tit_b {
+    font-family: 'GmarketSans', sans-serif; /*sans-serif-고딕*/
+    font-weight: 700; line-height: 1.2;
+}
+
+header {
+    position: absolute; /*body를 기준으로 정렬*/
+    left: 0; top: 0;
+    z-index: 100; /*position을 가지고 있는 요소들 중에서
+                    제일 높은 숫자를 줘서 위에 배치 - 메뉴 작동*/
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    padding: 17px 0 0 0;
+}
+header .gnb .gnb_open {
+    display: none; /*모바일에서만 나타남 - pc에서는 숨김*/
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+}
+header .gnb .gnb_wrap ul li a{
+    padding: 40px 39px 36px 39px;
+    font-size: 20px;
+    display: block; /*padding 적용*/
+    position: relative; /*after 정렬의 기준*/
+}
+header .gnb .gnb_wrap ul li a::after {
+    position: absolute; /*a를 기준으로 배치*/
+    right: 0;
+    top: 46px;
+    content: ""; /*after를 보이게 하는 값*/
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+}
+header .gnb .gnb_wrap ul li:last-child a::after {
+    display: none;
+}
+@media screen and (max-width:640px){
+    header 
+        {height: 387px; border-radius: 0;}
+    header .wrapper 
+        {display: flex; justify-content: space-between;}
+    header .logo 
+        {padding: 11px 0 0 0;}
+    header .logo img 
+        {width: 70px;}
+        /*이미지 태그로 코딩한 요소는 사이즈가 변경되면
+          반드시 css에서 img 태그를 불러서 스타일을 줘야함
+          감싸는 요소에 줘도 적용안됨
+          넓이를 조절하면 높이는 알아서 조절됨 */
+    header .gnb .gnb_open /*이미header에 position값이 존재함-header를 기준으로 정렬*/
+        {display: block; position: absolute; right: 0; top: 0; 
+        width: 60px; height: 50px;
+        font-size: 0; line-height: 0;} /*글자숨기기*/
+    header .gnb .gnb_wrap
+        {display: none;} /*메뉴는 열기 버튼을 클릭했을 때만 나옴*/
+
+}
+
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff; height: 900px; text-align: right;
+}
+.visual strong {
+    padding: 360px 0 10px 0; display: block;
+}
+.visual h2 {
+    font-size: 50px;
+}
+@media screen and (max-width:640px){
+    .visual {height: auto; padding: 170px 0;}
+    .visual strong {display: none;}
+    .visual h2 {font-size: 20px; font-weight: 700;}
+}
+
+.biz .wrapper 
+    {display: flex; justify-content: space-between; align-items: flex-start;}
+.biz .subject {position: sticky; top: 20px;}
+.biz .subject strong {color: #004289; font-size: 20px;}
+.biz .subject h2 {color: #2d2d2d; font-size: 45px; margin: 5px 0 0 0;}
+.biz .list {
+    width: 500px;
+    height: 1500px;
+    background-color: #004289;
+}
+
+
+footer {height: 2000px;}
