@@ -3,8 +3,8 @@
 html, body {
     font-family: 'Pretendard', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0em; /* 자간 */
+    font-size: 15px;
+    letter-spacing: -0.06em; /* 자간 */
     line-height: 1.4; /* 배수 - 글자크기에 1.4배 */
     color: #3d3d3d; /* 글자 색상 */
     word-break: keep-all; /* 단어별로 줄바꿈 */
@@ -19,10 +19,4 @@ html, body {
 @media screen and (max-width:1300px){
     #wrap {min-width: 1300px;}
     .wrapper {margin: 0 20px;} /*넓이는 1260px 유지 - 좌우에 20p*/
-}/*media*/
-
-@media screen and (max-width:640px){ /*모바일 반응형*/
-    html, body {font-size: 13px;}
-    #wrap {min-width: 100%;}
-    .wrapper {width: auto;}
 }/*media*/
