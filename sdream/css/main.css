@@ -86,13 +86,8 @@ header .gnb .gnb_wrap ul li:last-child a::after {display: none;}
         .biz .subject strong {font-size: 13px; font-weight: 500;}
         .biz .list {width: auto; /* 넓이 고정값 해제 */}
         .biz .list ul {gap: 16px; margin-top: 50px;}
-        .biz .list ul li {/* width: calc(50% - 8px); */
-            width: calc(50% - 8px);
-            color: #3D3D3D;
-            border-radius: 0;
-            overflow: visible;}
-            /* overflow 해제 - 길이만큼 늘어나게
-                모바일에서 사이즈가 줄어들면 제목이 2줄이 될 수도 있음 */
+        .biz .list ul li {/* width: calc(50% - 8px); */ width: calc(50% - 8px); color: #3D3D3D; border-radius: 0; overflow: visible;}
+            /* overflow 해제 - 길이만큼 늘어나게 모바일에서 사이즈가 줄어들면 제목이 2줄이 될 수도 있음 */
         .biz .list ul li:nth-child(odd) {transform: translate(0, 0);}
         .biz .list ul li a {height: auto; /* 제목이 여러줄이 될 수도 있음 */ text-align: left;}
         .biz .list ul li a:hover .photo::before {display: none;}
@@ -113,7 +108,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {display: none;}
 .news .list ul {display: flex; justify-content: space-between;}
 .news .list ul li {width: 404px; }
 .news .list ul li a h3 {color:#2d2d2d; font-size: 20px; margin: 25px 0 20px 0;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;} /*무조건 1줄로*/
+                    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;} /*무조건 1줄로*/
     /*제목을 무조건 2줄로 주고싶은 경우: line-height, height(행간X줄수/단위em), overflow:hidden을 준다*/
 .news .list ul li a {border-top: 1px solid #3d3d3d; display: block;}
 .news .list ul li a p {line-height: 1.4; height: 4.2em; overflow: hidden;}
@@ -134,13 +129,12 @@ header .gnb .gnb_wrap ul li:last-child a::after {display: none;}
         .news .subject strong {font-size: 13px; font-weight: 500;}
         .news .subject h2 {font-size: 20px; font-weight: 700; margin: 0 0 30px 0;}
         .news .list ul {display: block;}
-        .news .list ul li {width:auto; }
+        .news .list ul li {width: 100%;}
         .news .list ul li a h3 {color:#2d2d2d; font-size: 13px; overflow: hidden; width: calc(100%-80px); margin: 0;
                 text-overflow: ellipsis; white-space: wrap;}
         .news .list ul li a {border-top: 1px solid #3d3d3d; display: flex; justify-content: space-between; padding: 22px 0 13px 0;}
         .news .list ul li:last-child a {border-bottom: 1px solid #666666;}
         .news .list ul li a p {display:none;}
-
         .news .list ul li a .date {color: #666666; display: block; margin: 0px 0 5px 0;}
         .news .wrapper {position: relative;}
         .news .more {position: absolute; right: 0; top: 24px; color: #004289; font-size: 12px; }
@@ -152,8 +146,8 @@ header .gnb .gnb_wrap ul li:last-child a::after {display: none;}
 .wepzine .subject strong {font-size: 20px; color: #004289; margin: 175px 0 0 0; display: block;}
 .wepzine .subject h2 {font-size: 45px; color: #2d2d2d; margin: 5px 0 38px 0;}
 .wepzine .list ul {display: flex; justify-content: space-between;}
-.wepzine .list ul li {width: 404px; height: 276px;}
-.wepzine .list ul li a {display: block; background-color: #f4f4f4; padding: 0 0 25px 0;}
+.wepzine .list ul li {width: 404px; height: 407px;}
+.wepzine .list ul li a {display: block; background-color: #f4f4f4; padding: 0 0 25px 0; }
 
 .wepzine .list ul li a .photo {overflow: hidden; height: 276px;}
 .wepzine .list ul li a .photo img {width: 100%; height: 100%; object-fit: cover; transition: 0.5s;}
@@ -161,9 +155,8 @@ header .gnb .gnb_wrap ul li:last-child a::after {display: none;}
      1.이미지를 감싸는 요소가 넓이와 높이를 가지고 있어야함.(overflow:hidden;)
      2.이미지에는 width:100%, height:100%, object-fit:cover를 줘야함*/
 
-.wepzine .list ul li a strong {color: #004289; margin: 0 0 5px 0; display: block; margin: 25px 25px 5px 25px;}
+.wepzine .list ul li a strong {color: #004289; display: block; margin: 25px 25px 5px 25px;}
 .wepzine .list ul li a h3 {font-size: 23px; color: #2d2d2d; margin: 0 25px;}
-
 .wepzine .list ul li a:hover .photo img {transform: scale3d(1.2,1.2,1);} /*a에 마우스를 오버하면 이미지 확대*/
     /* .wepzine .list ul li a .photo img {transition: 0.5s;} -- 부드럽게 적용 */
 .wepzine .list ul li a:hover {background-color: #004289; color: #fff; box-shadow: 4px 4px 4px #9C9C9C;}
@@ -184,12 +177,10 @@ header .gnb .gnb_wrap ul li:last-child a::after {display: none;}
         .wepzine .list ul li {width: auto; height: auto;}
         .wepzine .list ul li:nth-child(3) {display: none;}
         .wepzine .list ul li a {background-color: transparent; padding: 0;}
-        
         .wepzine .list ul li a .photo {overflow: hidden; height: 216px;}
         .wepzine .list ul li a strong {font-size: 12px; margin: 3px 0;}
         .wepzine .list ul li a h3 {font-size: 15px; margin: 0; font-weight: 700;
                             line-height: 1.3; height: 2.6em; overflow: hidden;} /*무조건 2줄*/
-        
         .wepzine .list ul li a:hover .photo img {transform: none;}
         .wepzine .list ul li a:hover {background-color: transparent; color: #2d2d2d; box-shadow: none;}
         .wepzine .list ul li a:hover strong {color: #004289;}
@@ -201,16 +192,52 @@ header .gnb .gnb_wrap ul li:last-child a::after {display: none;}
                 right: 13px; top: 5px; width: 15px; height: 15px; content: "";}
         .wepzine .more a:hover {background-color: transparent; color: #004289;}
         .wepzine .more a:hover::after {background-image: url(../images/news_more.svg);}
-
 }
 
+.introduce {background-color: #f7f7f7; padding: 120px 0 143px 0; margin-top: 184px;}
+.introduce .subject strong {font-size: 20px; color: #004289; text-align: center; display: block;}
+.introduce .subject h2 {font-size: 45px; color: #2d2d2d; text-align: center; margin-bottom: 50px;}
+.introduce .list ul {display: flex; justify-content: center;}
+.introduce .list ul li {width: 618px;}
+.introduce .list ul li a {display: block; color: #fff;  height: 215px; font-size: 35px; position: relative;}
+.introduce .list ul li.intro1 {background: url(../images/introduce1.png) no-repeat center center /cover;}
+.introduce .list ul li.intro2 {background: url(../images/introduce2.png) no-repeat center center /cover;}
+.introduce .list ul li.intro1 a {padding: 92px 0 0 99px;}
+.introduce .list ul li.intro2 a {padding: 92px 0 0 65px;}
+.introduce .list ul li.intro1 a::after {position: absolute; background: url(../images/news_more_w.svg) no-repeat center center / contain; right: 54px; top: 46px; height: 123px; width: 123px; content: "";}
+.introduce .list ul li.intro2 a::after {position: absolute; background: url(../images/news_more_w.svg) no-repeat center center / contain; right: 46px; top: 46px; height: 123px; width: 123px; content: "";}
+.introduce .list ul li a:hover {background-color: rgba(0,0,0,0.8);}
+@media screen and (max-width:640px){
+        .introduce {padding: 60px 0 75px 0; margin-top: 66px;}
+        .introduce .subject strong {font-size: 13px; font-weight: 500; text-align: left;}
+        .introduce .subject h2 {font-size: 20px; font-weight: 700; margin: 0 0 20px 0; text-align: left;}
+        .introduce .list ul li {width: 50%;}
+        .introduce .list ul li a {height: 70px; font-size: 13px;text-align: center;}
+        .introduce .list ul li.intro1 a, .introduce .list ul li.intro2 a {padding: 30px 0 0 0;}
+        .introduce .list ul li.intro1 a::after, .introduce .list ul li.intro2 a::after {display: none;}
+        .introduce .list ul li a:hover {background-color: transparent;}
+}
 
-
-
-
-
-
-
-
-
-footer {height: 2000px;}
+footer {background-color: #666; padding: 55px 0 90px 0; color: rgba(255,255,255,0.8);}
+footer .wrapper {position: relative;}
+footer .top {position: absolute; right: 0; top: 0;}
+footer .top button {border: 1px solid #fff; width: 103px; height: 31px; border-radius: 50px; padding: 4px 30px 0 0; position: relative;}
+footer .top button::after {background: url(../images/top.svg) no-repeat center center / contain; position: absolute; right: 9px; top: 0; content: ""; height: 29px; width: 29px;}
+footer .f_nav ul {display: flex; gap: 40px;}
+footer .f_nav ul li {position: relative;}
+footer .f_nav ul li::after {position: absolute; right: -20px; top: 4px; height: 12px; width: 1px; background-color: rgba(255,255,255,0.2); content: "";}
+footer .f_nav ul li:last-child::after {display: none;}
+footer .f_info {margin: 40px 0 10px 0; display: flex; gap: 40px;}
+footer .copyright {color: rgba(255,255,255,0.6);}
+@media screen and (max-width:640px){
+        footer {padding: 21px 0 50px 0;}
+        footer .top {position: relative; right: auto; top: auto; text-align: right;}
+        footer .top button {width: 69px; height: 25px; border-radius: 50px; padding: 1px 11px 0 0; position: relative;}
+        footer .top button::after {right: 5px; top: -2px;}
+        footer .f_nav ul {flex-wrap: wrap;/*여러줄허용*/ gap: 0;}
+        footer .f_nav ul li {position: relative; margin: 15px 20px 7px 0;}
+        footer .f_nav ul li::after {position: absolute; right: -10px; top: 2px; height: 10px; width: 1px; background-color: rgba(255,255,255,0.2); content: "";}
+        footer .f_nav ul li:last-child::after {display: none;}
+        footer .f_info {margin: 30px 0 10px 0; display: flex; gap: 0; flex-wrap: wrap;}
+        footer .f_info address, footer .f_info span {margin: 0 20px 7px 0;}
+}
